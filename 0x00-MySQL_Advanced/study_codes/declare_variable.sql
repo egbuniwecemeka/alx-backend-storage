@@ -20,7 +20,7 @@ CREATE PROCEDURE my_vars()
             DECLARE c INT;
             SET c = 5;
             SELECT a, b, c;
-        END
+        END;
         SELECT a, b, c;
     END $$
 
