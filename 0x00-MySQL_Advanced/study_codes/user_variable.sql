@@ -10,6 +10,6 @@ CREATE PROCEDURE user_var()
         SET @x = 5;
         SET @y = 10;
         SELECT @x, @y, @x - @y; 
-    END
+    END;
 
 DELIMITER ;
