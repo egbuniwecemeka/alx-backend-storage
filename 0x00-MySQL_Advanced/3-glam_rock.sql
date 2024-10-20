@@ -9,6 +9,7 @@ SELECT
 FROM
    metal_bands
 WHERE
-    style = 'Glam rock'
-GROUP BY band_name
+    style LIKE '%Glam rock%'
+    AND formed IS NOT NULL
+
 ORDER BY lifespan DESC;
