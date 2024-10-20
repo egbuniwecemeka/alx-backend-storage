@@ -12,4 +12,4 @@ CREATE PROCEDURE user_var()
         SELECT @x, @y, @x - @y; 
     END
 
-DELIMETER ;
+DELIMITER ;
