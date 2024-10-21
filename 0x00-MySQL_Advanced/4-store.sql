@@ -1,6 +1,4 @@
 -- An sql script that creates a trigger that decreases the quantity of an item after adding a new order
-
---Set Delimiter
 DELIMITER $$ 
 
 -- Create trigger
