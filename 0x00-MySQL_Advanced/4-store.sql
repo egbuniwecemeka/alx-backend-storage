@@ -13,6 +13,3 @@ BEGIN
     SET quantity = quantity - NEW.number
     WHERE name = NEW.item_name;
 END $$
-
--- Reset to default delimiter
-DELIMITER ;
