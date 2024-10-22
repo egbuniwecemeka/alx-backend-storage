@@ -8,6 +8,8 @@ AFTER UPDATE ON users
 FOR EACH ROW
 BEGIN
     IF NEW.email <> OLD.email THEN
+        -- Update valid_email field for the specific user
+        UPDATE users
         SET valid_email = 0
         WHERE id = NEW.id;
     END IF;
