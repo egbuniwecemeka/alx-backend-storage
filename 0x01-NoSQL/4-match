@@ -1,2 +1,2 @@
 // A script that list all documents with a specified attribute in MongoDB
-db.school.find(name="Holberton school");
+db.school.find({name:"Holberton school"});
