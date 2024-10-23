@@ -6,4 +6,4 @@ use my_db;
 // Create a collection (school) using dot notation
 // Use db object to interact with collections
 // Insert a document into school collection
-db.school.insertOne({name: "Holberton school"})
+db.school.insert({name: "Holberton school"})
