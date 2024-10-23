@@ -9,7 +9,7 @@ db.my_db.school
 
 
 // Insert a document into school collection
-school.insertOne({name: "Holberton school"})
+db.school.insertOne({name: "Holberton school"})
 
 // View inserted document
 db.school.find()
