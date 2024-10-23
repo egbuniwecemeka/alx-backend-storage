@@ -47,7 +47,7 @@ lang = db.school
 result = lang.insert_many([language1, language2, language3])
 
 # Print returned InsertOneResult or InsertManyResult object
-print(result)
+# print(result)
 
 # Retrieve documents from a collection using find
 for res in lang.find():
