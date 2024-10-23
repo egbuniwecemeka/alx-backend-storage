@@ -1,15 +1,15 @@
 // my comment
 
-// Start MongoDB
-mongo
-
 // Use database
 use my_db;
 
 // Create a collection (school) using dot notation
-// Created lazily
-my_db.school
+// Use db object to interact with collections
+db.my_db.school
 
 
-// Insert a document into school
+// Insert a document into school collection
 school.insertOne({name: "Holberton school"})
+
+// View inserted document
+db.school.find()
