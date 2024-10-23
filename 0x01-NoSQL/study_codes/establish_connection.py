@@ -55,4 +55,5 @@ for res in lang.find():
 
 # Retrieve a single document using find_one()
 fav_lang = lang.find_one({"name": "JavaScript"})
-pprint.pprint(f"\n{fav_lang}")
+print()
+pprint.pprint(f"{fav_lang}")
