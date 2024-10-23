@@ -7,6 +7,3 @@ use my_db;
 // Use db object to interact with collections
 // Insert a document into school collection
 db.school.insertOne({name: "Holberton school"})
-
-// View inserted document
-db.school.find()
