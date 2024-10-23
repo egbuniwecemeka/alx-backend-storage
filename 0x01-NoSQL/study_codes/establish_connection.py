@@ -50,5 +50,5 @@ result = lang.insert_many([language1, language2, language3])
 print(result)
 
 # Retrieve documents from a collection using find
-for res in school.find():
+for res in lang.find():
     pprint.pprint(res)
