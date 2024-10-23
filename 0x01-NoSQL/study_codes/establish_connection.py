@@ -25,8 +25,25 @@ language1 = {
     "months": 3
 }
 
+language2 = {
+    "name": "NoSQL",
+    "e-hub": "ALX",
+    "stage": "Specialization",
+    "months": 3
+}
+
+language3 = {
+    "name": "JavaScript",
+    "e-hub": "ALX",
+    "stage": "Specialization",
+    "months": 3
+}
+
 # Specify collection (school) to insert or add document (language1)
 lang = db.school
 
-result = lang.insert_one(language1)
+# Insertion, use insert_one for single document (language1) and insert_many for multiple docs
+result = lang.insert_many([language1, language2, language3])
+
+# Print returned InsertOneResult or InsertManyResult object
 print(result)
