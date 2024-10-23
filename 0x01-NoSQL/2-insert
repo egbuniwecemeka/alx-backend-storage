@@ -1,5 +1,8 @@
 // my comment
 
+// Start MongoDB
+mongo
+
 // Use database
 use my_db;
 
@@ -10,5 +13,3 @@ my_db.school
 
 // Insert a document into school
 school.insertOne({name: "Holberton school"})
-
-
