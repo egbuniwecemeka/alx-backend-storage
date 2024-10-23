@@ -1,2 +1,2 @@
-// my comment
+// A script that list all documents in the school collection
 db.school.find()
