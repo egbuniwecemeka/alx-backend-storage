@@ -1,0 +1,14 @@
+// my comment
+
+// Use database
+use my_db;
+
+// Create a collection (school) using dot notation
+// Created lazily
+my_db.school
+
+
+// Insert a document into school
+school.insertOne({name: "Holberton school"})
+
+
