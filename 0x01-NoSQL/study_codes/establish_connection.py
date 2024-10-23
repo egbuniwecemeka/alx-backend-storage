@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """ A script that establishes a connection to a default MongoDB database"""
 
+import pprint
 from pymongo import MongoClient
 
 # Specify host name, port etc as parameters
@@ -47,3 +48,7 @@ result = lang.insert_many([language1, language2, language3])
 
 # Print returned InsertOneResult or InsertManyResult object
 print(result)
+
+# Retrieve documents from a collection using find
+for res in school.find():
+    pprint.pprint(res)
