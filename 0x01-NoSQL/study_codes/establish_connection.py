@@ -51,4 +51,8 @@ result = lang.insert_many([language1, language2, language3])
 
 # Retrieve documents from a collection using find
 for res in lang.find():
-    pprint.pprint(res)
+    pprint.pprint(res)  # pprint is for pretty print that is user friendly
+
+# Retrieve a single document using find_one()
+fav_lang = lang.find_one({"name": "JavaScript"})
+pprint.pprint(f"\n{fav_lang}")
