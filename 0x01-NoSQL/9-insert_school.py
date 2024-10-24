@@ -11,6 +11,6 @@ def insert_school(mongo_collection, **kwargs):
             document[key] = value
         # Insert the constructed document
         new_inserted_id = mongo_collection.insert_one(document)
-        return new_inserted_id
+        return new_inserted_id.inserted_id
     else:
         return None
