@@ -4,10 +4,12 @@
 
 def insert_school(mongo_collection, **kwargs):
     """ Function inserts a document into a collection """
-    result = []
+    document = {}
     if mongo_collection != None:
+        # Manually construct the document to insert into (Optional)
         for key, value in kwargs.items():
-            result = mongo_collection.get('_id')
+            document[key] = value
+        new_inserted_id = mongo_collection.insert_one(document)
+        return new_inserted_id
     else:
-        return
-    return result
+        return None
