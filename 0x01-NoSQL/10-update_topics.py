@@ -1,4 +1,4 @@
-#!?usr/bin/env python3
+#!/usr/bin/env python3
 """ A python script that changes all topics of a document based on the name """
 
 from typing import List
