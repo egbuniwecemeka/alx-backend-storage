@@ -11,7 +11,7 @@ if __name__ == "__main__":
     client = MongoClient()
     school_collection = client.my_db.school
     new_school_id = insert_school(school_collection, name="UCFS", address="505 Parnassus street")
-    print("New school created: {}".format(new_school_id.get('_id')))
+    print("New school created: {}".format(new_school_id))
 
     schools = list_all(school_collection)
     for school in schools:
