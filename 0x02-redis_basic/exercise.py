@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ A python script that creates a Cache class """
 
-from typing import Union
+from typing import Union, Callable, Any
 import redis
 import uuid
 
@@ -18,3 +18,18 @@ class Cache:
         key = str(uuid.uuid4())
         self._redis.set(key, data)
         return key
+    
+    def get(self, key: str, fn: Callable[[bytes], Any] = None) -> Any:
+        """Retrieve data from redis and apply optional conversion function """
+        data = self._redis.get(key)
+        if data is None:
+            return None
+        return fn(data) if fn else data
+        
+    def get_str(self, key: str) -> Union[str, None]:
+        """ Retrieve a string from Redis """
+        return self.get(key, lambda d: d.decode("utf-8"))
+    
+    def get_int(self, key: str) -> Union[int, None]:
+        """ Retrieves an integer from Redis """
+        return self.get(key, int)
