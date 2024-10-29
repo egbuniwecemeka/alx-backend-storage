@@ -8,11 +8,13 @@ from functools import wraps
 
 def count_calls(method: Callable) -> Callable:
     """ A decorator that increments count every time method is called """
+    count_key = method.__qualname__
+
     @wraps(method)
     def wrapper(self, *args, **kwargs):
         """ Key count is based on method type """
         # Increments the count in Redis
-        self._redis.incr(method.__qualname__)
+        self._redis.incr(count_key)
 
         # Call the originaaal method
         return method(self, *args, **kwargs)
