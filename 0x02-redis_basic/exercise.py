@@ -12,7 +12,7 @@ def count_calls(method: Callable) -> Callable:
     def wrapper(self, *args, **kwargs):
         """ Key count is based on method type """
         # Increments the count in Redis
-        self._redis.incr(f"count: {method.__qualname__}")
+        self._redis.incr(method.__qualname__)
 
         # Call the originaaal method
         return method(self, *args, **kwargs)
